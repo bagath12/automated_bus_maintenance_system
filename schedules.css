@@ -1,0 +1,5 @@
+.page-schedules .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));align-items:end}
+.page-schedules .row button{grid-column:1/-1;justify-self:start}
+.page-schedules td .inline select{min-width:110px}
+.page-schedules td .inline input{min-width:100px}
+@media(max-width:720px){.page-schedules td .inline{justify-content:flex-end;width:100%}}

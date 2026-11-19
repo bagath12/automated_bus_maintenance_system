@@ -1,0 +1,29 @@
+/* Lion Transport - shared components: tables, forms, buttons, tags, notices */
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--r);display:block;overflow-x:auto;box-shadow:0 2px 6px rgba(43,29,20,.07)}
+th,td{padding:.6rem .8rem;text-align:left;border-bottom:1px solid #eee9e1;vertical-align:middle}
+th{background:var(--sand);color:var(--brown);font-weight:600;white-space:nowrap}
+tr:hover>td{background:#fcf8f1}
+input,select,button{font:inherit;padding:.45rem .7rem;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);max-width:100%;min-height:38px}
+input:focus,select:focus{border-color:var(--gold)}
+td input{width:100%;min-width:90px}
+button{background:var(--gold);color:var(--brown);border-color:var(--gold);font-weight:600;cursor:pointer;transition:background .15s}
+button:hover{background:var(--gold2)}
+button.ghost{background:#fff;color:var(--red);border-color:var(--red)}
+button.ghost:hover{background:#fbeceb}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;padding:.9rem;background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.row>*{flex:1 1 150px}.row>button{flex:0 0 auto}
+.inline{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.3rem}
+.tag{display:inline-block;padding:.1rem .65rem;border-radius:99px;font-size:.85rem;font-weight:600;color:#fff;background:#7d746a;white-space:nowrap}
+.tag.Due{background:var(--red)}.tag.Soon{background:var(--gold);color:var(--brown)}.tag.Completed{background:var(--green)}
+.note{background:#fdf3de;border-left:5px solid var(--gold);padding:.6rem .9rem;border-radius:4px}
+.hint{color:var(--muted);font-size:.9rem}.err{color:var(--red);font-weight:600}
+/* Phones: each table row becomes a labelled card (labels are added by the script in foot()) */
+@media(max-width:720px){
+ table,tbody,tr,td{display:block;width:100%}
+ table{background:none;border:0;box-shadow:none;overflow:visible}
+ tr.hd{display:none}
+ tr{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:var(--r);margin-bottom:.8rem;padding:.2rem 0;box-shadow:0 2px 6px rgba(43,29,20,.07)}
+ td{display:flex;justify-content:space-between;align-items:center;gap:.8rem;text-align:right;border:0;padding:.4rem .8rem}
+ td::before{content:attr(data-label);flex:0 0 36%;text-align:left;font-weight:600;color:var(--muted)}
+ td input{flex:1}
+ .row>*{flex:1 1 100%}}
